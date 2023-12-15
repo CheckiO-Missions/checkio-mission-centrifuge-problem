@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    A centrifuge has <code>n</code> identical slots, each big enough to fit one test tube. To prevent this centrifuge from wobbling, <code>k</code> identical tubes must be placed into these slots so that their mutual center of gravity lies precisely at the center of the centrifuge. This problem was inspired by yet another video “The Centrifuge Problem”, which you may watch below. Alternatively, whose eyes read faster than their ears listen can check out Matt Baker’s post <a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a>.
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    So, Balancing <code>k</code> test tubes into <code>n</code> slots turns out to be possible if and only if both <code>k, n-k</code> can be expressed as sums of prime factors of <code>n</code>, repetition of factors allowed. For example, when <code>n</code> equals 6 whose prime factors are 2 and 3, the centrifuge can hold 0, 2, 3, 4 (= 2 + 2) or 6 (= 3 + 3) test tubes. 
+    However, there is no possible way to balance 1 or 5 test tubes in six slots. Even though 5 = 2 + 3 satisfies the first part of the rule, there is no way to counterbalance the remaining empty slot, which is required despite the counterintuitive fact that empty slots weigh nothing!
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    This function does not actually need to construct the balanced configuration of <code>k</code> test tubes, but merely determine whether at least one balanced configuration exists for the given <code>n, k</code>.
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> Two integers <span translate="no">({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+    <strong>Output:</strong> Logic value <span translate="no">(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from Python CCPS 109. It is taught for Ryerson Chang School of Continuing Education by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
