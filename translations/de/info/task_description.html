@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Eine Zentrifuge hat <code>n</code> identische Schlitze, die jeweils groß genug sind, um ein Reagenzglas aufzunehmen. Um zu verhindern, dass die Zentrifuge wackelt, müssen <code>k</code> identische Röhrchen so in diese Schlitze gestellt werden, dass ihr gemeinsamer Schwerpunkt genau in der Mitte der Zentrifuge liegt. Dieses Problem wurde von einem anderen Video "Das Zentrifugenproblem" inspiriert, das Sie sich unten ansehen können. Alternativ können Sie sich auch den Beitrag von Matt Baker <a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a> ansehen, dessen Augen schneller lesen als seine Ohren hören.
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    Es stellt sich also heraus, dass das Ausbalancieren von <code>k</code> Reagenzgläsern in <code>n</code> Steckplätzen nur dann möglich ist, wenn beide <code>k, n-k</code> als Summen von Primfaktoren von <code>n</code> ausgedrückt werden können, wobei die Wiederholung von Faktoren erlaubt ist. Wenn <code>n</code> zum Beispiel gleich 6 ist, dessen Primfaktoren 2 und 3 sind, kann die Zentrifuge 0, 2, 3, 4 (= 2 + 2) oder 6 (= 3 + 3) Reagenzgläser aufnehmen. 
+    Es gibt jedoch keine Möglichkeit, 1 oder 5 Reagenzgläser in sechs Fächern unterzubringen. Auch wenn 5 = 2 + 3 den ersten Teil der Regel erfüllt, gibt es keine Möglichkeit, den verbleibenden leeren Steckplatz auszugleichen, was trotz der kontraintuitiven Tatsache, dass leere Steckplätze nichts wiegen, erforderlich ist!
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    Diese Funktion muss die ausgewogene Konfiguration von <code>k</code> Reagenzgläsern nicht wirklich konstruieren, sondern lediglich feststellen, ob mindestens eine ausgewogene Konfiguration für die gegebene <code>n, k</code> existiert.
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Zwei ganze Zahlen <span>({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Logischer Wert <span>(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Die Aufgabe wurde aus Python CCPS 109 übernommen. Sie wird für die Ryerson Chang School of Continuing Education unterrichtet von <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
