@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Une centrifugeuse possède <code>n</code> fentes identiques, chacune suffisamment grande pour accueillir un tube à essai. Pour empêcher cette centrifugeuse d'osciller, <code>k</code> tubes identiques doivent être placés dans ces fentes de manière à ce que leur centre de gravité mutuel se trouve précisément au centre de la centrifugeuse. Ce problème a été inspiré par une autre vidéo intitulée "Le problème de la centrifugeuse", que vous pouvez visionner ci-dessous. Les personnes dont les yeux lisent plus vite que les oreilles écoutent peuvent également consulter l'article de Matt Baker <a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a>.
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    Ainsi, équilibrer les tubes à essai <code>k</code> dans les fentes <code>n</code> s'avère possible si et seulement si les deux <code>k, n-k</code> peuvent être exprimés comme des sommes de facteurs premiers de <code>n</code>, la répétition des facteurs étant autorisée. Par exemple, lorsque <code>n</code> est égal à 6 dont les facteurs premiers sont 2 et 3, la centrifugeuse peut contenir 0, 2, 3, 4 (= 2 + 2) ou 6 (= 3 + 3) tubes à essai. 
+    Cependant, il n'est pas possible d'équilibrer 1 ou 5 tubes à essai dans six emplacements. Même si 5 = 2 + 3 satisfait la première partie de la règle, il n'y a aucun moyen de contrebalancer l'emplacement vide restant, ce qui est nécessaire malgré le fait contre-intuitif que les emplacements vides ne pèsent rien!
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    Cette fonction n'a pas besoin de construire la configuration équilibrée de <code>k</code> tubes à essai, mais simplement de déterminer s'il existe au moins une configuration équilibrée pour le site <code>n, k</code> donné.
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Deux nombres entiers <span>({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+   <strong>Sortie:</strong> Valeur logique <span>(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>La mission a été tirée de Python CCPS 109. Il est enseigné pour l'école d'éducation permanente Ryerson Chang par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
