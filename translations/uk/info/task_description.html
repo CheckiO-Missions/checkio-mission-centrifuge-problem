@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Центрифуга має <code>n</code> однакові прорізи, кожна з яких достатньо велика, щоб вмістити одну пробірку. Щоб центрифуга не хиталася, <code>k</code> однакові пробірки потрібно помістити в ці прорізи так, щоб їхній взаємний центр тяжіння знаходився точно в центрі центрифуги. Ця задача була натхненна ще одним відео "Проблема центрифуги", яке ви можете переглянути нижче. Крім того, ті, чиї очі читають швидше, ніж вуха слухають, можуть ознайомитися зі статтею Метта Бейкера <a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a>.
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    Отже, врівноваження <code>k</code> пробірок у слотах <code>n</code> виявляється можливим тоді і тільки тоді, коли обидва <code>k, n-k</code> можуть бути виражені як суми простих множників <code>n</code>, причому допускається повторення множників. Наприклад, коли <code>n</code> дорівнює 6, прості множники якого 2 і 3, центрифуга може вмістити 0, 2, 3, 4 (= 2 + 2) або 6 (= 3 + 3) пробірок. 
+    Однак не існує способу збалансувати 1 або 5 пробірок у шести гніздах. Хоча 5 = 2 + 3 задовольняє першій частині правила, не існує способу врівноважити порожнє гніздо, яке потрібно, незважаючи на контрінтуїтивний факт, що порожні гнізда нічого не важать!
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    Ця функція насправді не повинна будувати збалансовану конфігурацію пробірок <code>k</code>, а лише визначати, чи існує хоча б одна збалансована конфігурація для заданих <code>n, k</code>.
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Два цілих числа <span>({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+   <strong>Вихідні дані:</strong> Логічне значення <span>(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Місія була взята з Python CCPS 109. Його викладають для Школи безперервної освіти Райерсона Чанга (Ryerson Chang School of Continuing Education) <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
