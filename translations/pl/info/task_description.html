@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Wirówka ma <code>n</code> identyczne szczeliny, z których każda jest wystarczająco duża, aby zmieścić jedną probówkę. Aby zapobiec chybotaniu się wirówki, <code>k</code> identyczne probówki muszą być umieszczone w tych szczelinach tak, aby ich wzajemny środek ciężkości znajdował się dokładnie w środku wirówki. Problem ten został zainspirowany innym filmem "The Centrifuge Problem", który mogą Państwo obejrzeć poniżej. Alternatywnie, osoby, których oczy czytają szybciej niż uszy słuchają, mogą zapoznać się z postem Matta Bakera <a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a>.
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    Tak więc wyważenie <code>k</code> probówek w gniazdach <code>n</code> okazuje się możliwe wtedy i tylko wtedy, gdy oba <code>k, n-k</code> można wyrazić jako sumy czynników pierwszych <code>n</code>, powtarzanie czynników jest dozwolone. Na przykład, gdy <code>n</code> równa się 6, którego czynniki pierwsze to 2 i 3, wirówka może pomieścić 0, 2, 3, 4 (= 2 + 2) lub 6 (= 3 + 3) probówek. 
+    Nie ma jednak możliwości zrównoważenia 1 lub 5 probówek w sześciu gniazdach. Nawet jeśli 5 = 2 + 3 spełnia pierwszą część reguły, nie ma sposobu, aby zrównoważyć pozostałe puste gniazdo, co jest wymagane pomimo sprzecznego z intuicją faktu, że puste gniazda nic nie ważą!
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    Funkcja ta nie musi w rzeczywistości konstruować zrównoważonej konfiguracji <code>k</code> probówek, a jedynie określić, czy istnieje co najmniej jedna zrównoważona konfiguracja dla danej <code>n, k</code>.
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Wejście:</strong> Dwie liczby całkowite <span>({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+   <strong>Wyjście:</strong> Wartość logiczna <span>(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Misja została zaczerpnięta z Python CCPS 109. Jest nauczany dla Ryerson Chang School of Continuing Education przez <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
