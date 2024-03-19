@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    一台离心机上有<code>n</code> 个相同的槽，每个槽的大小足以放进一个试管。为了防止离心机晃动，必须将<code>k</code> 相同的试管放入这些槽中，使它们的重心正好位于离心机的中心。这个问题的灵感来自另一个视频 "离心机问题"，您可以在下面观看。另外，如果您的眼睛读得比耳朵听得快，也可以查看马特-贝克（Matt Baker）的文章<a target="_blank" href="https://mattbaker.blog/2018/06/25/the-balanced-centrifuge-problem/">“The Balanced Centrifuge Problem”</a> 。
+</p>
+
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7DHE8RnsCQ8?si=x1SEY2ZcmzW55Pp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<p style="text-align: justify;">
+    因此，将<code>k</code> 试管平衡放入<code>n</code> 插槽是可能的，前提是<code>k, n-k</code> 都可以表示为<code>n</code> 的质因数之和，且允许因数重复。例如，当<code>n</code> 等于 6，其质因数为 2 和 3 时，离心机可以容纳 0、2、3、4（= 2 + 2）或 6（= 3 + 3）支试管。 
+    但是，不可能在 6 个插槽中平衡 1 或 5 个试管。即使 5 = 2 + 3 满足规则的第一部分，也没有办法平衡剩余的空槽，尽管空槽没有重量这一违反直觉的事实是需要平衡的！
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}centrifuge.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    该函数实际上并不需要构建<code>k</code> 试管的平衡配置，而只是确定给定的<code>n, k</code> 是否至少存在一种平衡配置。
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong>两个整数 <span>({% if is_js %}number{% else %}int{% endif %})</span>
+</p>
+
+<p>
+   <strong>输出：</strong>逻辑值 <span>(bool{% if is_js %}ean{% endif %})</span>. 
+</p>
+
+<p>
+    <strong>示例</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>任务摘自 Python CCPS 109。该课程由张瑞敏继续教育学院教授。<a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
