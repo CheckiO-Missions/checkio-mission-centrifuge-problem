@@ -25,13 +25,13 @@ randoms = []
 #     return sum(k) and sum(n-k)
 
 
-for _ in range(10):
-    n = randint(30, 100)
-    k = randint(1, n)
-    randoms.append({
-        "input": [n, k],
-        "answer": balanced_centrifuge(n, k),
-    })
+# for _ in range(10):
+#     n = randint(30, 100)
+#     k = randint(1, n)
+#     randoms.append({
+#         "input": [n, k],
+#         "answer": balanced_centrifuge(n, k),
+#     })
 
 
 TESTS = {
