@@ -13,16 +13,16 @@ from functools import cache
 
 
 randoms = []
-def balanced_centrifuge(n, k):
-    @cache
-    def sum(k):
-        if k <= 0:
-            return k == 0
-        for p in primefactors(n):
-            if sum(k - p):
-                return True
-        return False
-    return sum(k) and sum(n-k)
+# def balanced_centrifuge(n, k):
+#     @cache
+#     def sum(k):
+#         if k <= 0:
+#             return k == 0
+#         for p in primefactors(n):
+#             if sum(k - p):
+#                 return True
+#         return False
+#     return sum(k) and sum(n-k)
 
 
 for _ in range(10):
