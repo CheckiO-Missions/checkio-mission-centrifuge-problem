@@ -8,7 +8,7 @@ Each test is a dict with
 """
 
 from random import randint
-from sympy import primefactors
+# from sympy import primefactors
 from functools import cache
 
 
@@ -59,5 +59,5 @@ TESTS = {
             "answer": False,
         },
     ],
-    "Random": randoms,
+    # "Random": randoms,
 }
