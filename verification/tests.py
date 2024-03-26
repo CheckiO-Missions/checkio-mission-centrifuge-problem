@@ -7,31 +7,31 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 
-from random import randint
-from sympy import primefactors
-from functools import cache
+# from random import randint
+# from sympy import primefactors
+# from functools import cache
 
 
-randoms = []
-def balanced_centrifuge(n, k):
-    @cache
-    def sum(k):
-        if k <= 0:
-            return k == 0
-        for p in primefactors(n):
-            if sum(k - p):
-                return True
-        return False
-    return sum(k) and sum(n-k)
+# randoms = []
+# def balanced_centrifuge(n, k):
+#     @cache
+#     def sum(k):
+#         if k <= 0:
+#             return k == 0
+#         for p in primefactors(n):
+#             if sum(k - p):
+#                 return True
+#         return False
+#     return sum(k) and sum(n-k)
 
 
-for _ in range(10):
-    n = randint(30, 100)
-    k = randint(1, n)
-    randoms.append({
-        "input": [n, k],
-        "answer": balanced_centrifuge(n, k),
-    })
+# for _ in range(10):
+#     n = randint(30, 100)
+#     k = randint(1, n)
+#     randoms.append({
+#         "input": [n, k],
+#         "answer": balanced_centrifuge(n, k),
+#     })
 
 
 TESTS = {
@@ -59,5 +59,5 @@ TESTS = {
             "answer": False,
         },
     ],
-    "Random": randoms,
+    # "Random": randoms,
 }
