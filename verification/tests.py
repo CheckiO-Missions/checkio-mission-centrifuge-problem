@@ -51,6 +51,10 @@ TESTS = {
             "input": [1234, 43],
             "answer": False,
         },
+        {
+            "input": [6, 1],
+            "answer": False,
+        },
     ],
     "Random": randoms,
 }
